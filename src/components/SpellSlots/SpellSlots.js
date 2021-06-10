@@ -20,6 +20,7 @@ export default class SpellSlots extends Component {
   render() {
     return (
       <div className="spell-slots-container">
+        <h2 className="slots-intro">First, please enter your maximum Spell Slots per Spell Level</h2>
         <label for="level1">1st</label>
         <input type="number" id="level1" min="0" max="4" />
         <label for="level2">2nd</label>
