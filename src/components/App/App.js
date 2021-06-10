@@ -1,6 +1,6 @@
 import './App.css';
 import {getSpells, getSingleSpell} from '../../APIcalls';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class App extends Component {
   constructor(props) {
