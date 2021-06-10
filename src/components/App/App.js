@@ -1,12 +1,21 @@
 import './App.css';
 import {getSpells, getSingleSpell} from '../../APIcalls';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello Spells!</h1>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      spells: [],
+    }
+  }
+  
+  render() {
+    return (
+      <div>
+        <h1>Spellz!</h1>
+      </div>
+    )
+  }
 }
 
-export default App;
