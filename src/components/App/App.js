@@ -9,9 +9,19 @@ export default class App extends Component {
     super(props);
     this.state = {
       spells: [],
+      error: ""
     }
   }
-  
+
+  componentDidMount = async () => {
+    try {
+      const fetchedSpells = await getSpells();
+      this.setState({spells: fetchedSpells})
+    } catch (error) {
+      this.setState({error: "Could not retrieve spells! The Head Wizard probably found the ale again."})
+    }
+  }
+
   render() {
     return (
       <>
