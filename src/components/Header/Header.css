@@ -4,6 +4,9 @@
   font-size: 4em;
   color: white;
   text-shadow: 5px 5px 0 black;
+  border-bottom: 4px solid #F9D03F;
+  box-shadow: 0px 10px 10px black;
+  margin-top: 1rem;
 }
 
 /* header {
