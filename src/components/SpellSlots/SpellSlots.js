@@ -21,23 +21,23 @@ export default class SpellSlots extends Component {
     return (
       <div className="spell-slots-container">
         <h2 className="slots-intro">First, please enter your maximum Spell Slots per Spell Level</h2>
-        <label for="level1">1st</label>
+        <label htmlFor="level1">1st</label>
         <input type="number" id="level1" min="0" max="4" />
-        <label for="level2">2nd</label>
+        <label htmlFor="level2">2nd</label>
         <input type="number" id="level2" min="0" max="4" />
-        <label for="level3">3rd</label>
+        <label htmlFor="level3">3rd</label>
         <input type="number" id="level3" min="0" max="4" />
-        <label for="level4">4th</label>
+        <label htmlFor="level4">4th</label>
         <input type="number" id="level4" min="0" max="4" />
-        <label for="level5">5th</label>
+        <label htmlFor="level5">5th</label>
         <input type="number" id="level5" min="0" max="4" />
-        <label for="level6">6th</label>
+        <label htmlFor="level6">6th</label>
         <input type="number" id="level6" min="0" max="4" />
-        <label for="level7">7th</label>
+        <label htmlFor="level7">7th</label>
         <input type="number" id="level7" min="0" max="4" />
-        <label for="level8">8th</label>
+        <label htmlFor="level8">8th</label>
         <input type="number" id="level8" min="0" max="4" />
-        <label for="level9">9th</label>
+        <label htmlFor="level9">9th</label>
         <input type="number" id="level9" min="0" max="4" />
       </div>
     )
