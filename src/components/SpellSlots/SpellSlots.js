@@ -18,7 +18,7 @@ export default class SpellSlots extends Component {
   }
 
   handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value })
+    this.setState({ [event.target.name]: parseInt(event.target.value) })
   }
 
   render() {
@@ -27,12 +27,12 @@ export default class SpellSlots extends Component {
         <h2 className="slots-intro">First, please enter your maximum Spell Slots per Spell Level</h2>
         <label htmlFor="level1">1st</label>
         <input 
-        type="number" 
-        id="level1" 
-        min="0" 
-        max="4"
-        value={this.state.level1}
-        onChange={event => this.handleChange(event)}
+          type="number" 
+          name="level1" 
+          min="0" 
+          max="4"
+          value={this.state.level1}
+          onChange={event => this.handleChange(event)}
          />
         <label htmlFor="level2">2nd</label>
         <input type="number" id="level2" min="0" max="4" />
