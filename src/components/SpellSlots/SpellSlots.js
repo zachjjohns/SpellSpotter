@@ -1,5 +1,4 @@
 import './SpellSlots.css';
-
 import React, { Component } from 'react'
 
 export default class SpellSlots extends Component {
@@ -20,8 +19,9 @@ export default class SpellSlots extends Component {
   
   render() {
     return (
-      <div>
-        <p>Spells go Here</p>
+      <div className="spell-slots-container">
+        <label for="level1">1st</label>
+        <input type="number" id="level 1" min="0" max="4" />
       </div>
     )
   }
