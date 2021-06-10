@@ -17,7 +17,10 @@ export default class SpellSlots extends Component {
     }
   }
 
-  
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   render() {
     return (
       <div className="spell-slots-container">
