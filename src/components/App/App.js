@@ -1,5 +1,5 @@
 import './App.css';
-import {getSpells} from '../../APIcalls';
+import {getSpells, getSingleSpell} from '../../APIcalls';
 
 function App() {
   return (
