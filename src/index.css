@@ -3,3 +3,7 @@ body {
   background-color: #79142D;
   color: white;
 }
+
+* {
+  font-family: 'Titillium Web', sans-serif;
+}
