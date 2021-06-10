@@ -21,6 +21,11 @@ export default class SpellSlots extends Component {
     this.setState({ [event.target.name]: parseInt(event.target.value) })
   }
 
+  submitSpells = event => {
+    event.preventDefault();
+    
+  }
+
   render() {
     return (
       <form className="spell-slots-container">
