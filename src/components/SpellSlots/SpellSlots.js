@@ -106,6 +106,11 @@ export default class SpellSlots extends Component {
           value={this.state.level9}
           onChange={event => this.handleChange(event)}
         />
+        <button
+          className="submit-spells"
+          onClick={event => this.submitSpells(event)}>
+          Submit Spells!
+        </button>
       </form>
     )
   }
