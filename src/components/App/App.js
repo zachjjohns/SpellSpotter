@@ -1,4 +1,5 @@
 import './App.css';
+import {getSpells} from '../../APIcalls';
 
 function App() {
   return (
