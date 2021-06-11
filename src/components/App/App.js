@@ -17,7 +17,7 @@ export default class App extends Component {
   componentDidMount = async () => {
     try {
       const fetchedSpells = await getSpells();
-      this.setState({spells: fetchedSpells})
+      this.setState({spells: fetchedSpells.results})
     } catch (error) {
       this.setState({error: "Could not retrieve spells! The Head Wizard probably found the ale again."})
     }
