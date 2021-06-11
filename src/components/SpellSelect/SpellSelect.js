@@ -6,7 +6,8 @@ export default class SpellSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSpell: ""
+      currentSpell: "",
+      spellBook: []
     }
   }
 
@@ -14,15 +15,21 @@ export default class SpellSelect extends Component {
     this.setState({ currentSpell: event.target.value });
   }
 
+  addSpell = (event) => {
+    
+  }
+
   render() {
     return (
     <>
-      <select className="spells-dropdown" value={this.state.currentSpell} onChange={this.handleChange}>
+      <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
         {this.props.spells.map((spell) => (
           <option value={spell.index} key={spell.index}>{spell.name}</option>
         ))}
       </select>
-      <button>Add to Spell Book</button>
+      <button
+        className="add-spell-button"
+        onClick={event => this.addSpell(event)}>Add to Spell Book</button>
     </>
     )
   }
