@@ -28,7 +28,7 @@ export default class App extends Component {
       <>
         <Header />
         <SpellSlots />
-        <SpellSelect />
+        <SpellSelect spells={this.state.spells}/>
       </>
     )
   }
