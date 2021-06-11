@@ -16,11 +16,14 @@ export default class SpellSelect extends Component {
 
   render() {
     return (
-    <select className="spells-dropdown" value={this.state.currentSpell} onChange={this.handleChange}>
-      {this.props.spells.map((spell) => (
-        <option value={spell.index} key={spell.index}>{spell.name}</option>
-      ))}
-    </select>
+    <>
+      <select className="spells-dropdown" value={this.state.currentSpell} onChange={this.handleChange}>
+        {this.props.spells.map((spell) => (
+          <option value={spell.index} key={spell.index}>{spell.name}</option>
+        ))}
+      </select>
+      <button>Add to Spell Book</button>
+    </>
     )
   }
 }
