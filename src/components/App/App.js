@@ -1,6 +1,7 @@
 import './App.css';
 import Header from '../Header/Header';
 import SpellSlots from '../SpellSlots/SpellSlots';
+import SpellSelect from '../SpellSelect/SpellSelect';
 import {getSpells, getSingleSpell} from '../../APIcalls';
 import React, { Component } from 'react';
 
@@ -27,6 +28,7 @@ export default class App extends Component {
       <>
         <Header />
         <SpellSlots />
+        <SpellSelect />
       </>
     )
   }
