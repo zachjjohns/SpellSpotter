@@ -1,5 +1,5 @@
 import './SpellSelect.css';
-
+import { getSingleSpell } from '../../APIcalls';
 import React, { Component } from 'react'
 
 export default class SpellSelect extends Component {
@@ -15,8 +15,11 @@ export default class SpellSelect extends Component {
     this.setState({ currentSpell: event.target.value });
   }
 
-  addSpell = (event) => {
-    
+  addSpell = async (event) => {
+    event.preventDefault();
+    const grabbedSpell = await getSingleSpell(this.state.currentSpell)
+    this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
+    console.log(this.state.spellBook)
   }
 
   render() {

@@ -1,6 +1,6 @@
 export const getSpells = async () => {
   const response = await fetch('https://www.dnd5eapi.co/api/spells');
-  const data = await errorHandler(response);
+  const data = errorHandler(response);
   return data
 }
 
