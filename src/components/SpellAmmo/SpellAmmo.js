@@ -31,11 +31,12 @@ export default class SpellAmmo extends Component {
       <section className="ammo-section">
         <h2 className="todays-ammo">Today's Spell Ammo by Level</h2>
         <div className="ammo-wrapper">
+          {!!this.state.level1 && 
           <div className="level-container">
             <p>1st</p>
             <p className="ammo-p">{this.state.level1}</p>
             <button onClick={() => this.useSpell("level1")}>Cast Spell</button>
-          </div>
+          </div>}
           <div className="level-container">
             <p>2nd</p>
             <p className="ammo-p">{this.state.level2}</p>
