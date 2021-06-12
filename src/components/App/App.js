@@ -4,7 +4,7 @@ import SpellSlots from '../SpellSlots/SpellSlots';
 import SpellSelect from '../SpellSelect/SpellSelect';
 import { getSpells } from '../../APIcalls';
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
   constructor(props) {
@@ -28,8 +28,14 @@ export default class App extends Component {
     return (
       <>
         <Header />
-        <SpellSlots />
-        <SpellSelect spells={this.state.spells}/>
+        <Switch>
+          <Route path="/">
+            <SpellSlots />
+          </Route>
+          <Route path="/spellbook">
+            <SpellSelect spells={this.state.spells}/>
+          </Route>
+        </Switch>
       </>
     )
   }
