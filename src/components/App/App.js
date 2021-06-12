@@ -10,7 +10,15 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      spells: [],
+      level1: 0,
+      level2: 0,
+      level3: 0,
+      level4: 0,
+      level5: 0,
+      level6: 0,
+      level7: 0,
+      level8: 0,
+      level9: 0,
       error: ""
     }
   }
@@ -24,12 +32,18 @@ export default class App extends Component {
     }
   }
 
+  // setSpellSlots = () => {
+
+  // }
+
   render() {
     return (
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={SpellSlots} />
+          <Route exact path="/">
+            <SpellSlots data={this.state}/>
+          </Route>
           <Route path="/spellbook">
             <SpellSelect spells={this.state.spells}/>
           </Route>
