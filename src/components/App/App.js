@@ -10,6 +10,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      spells: [],
       level1: 0,
       level2: 0,
       level3: 0,
@@ -31,10 +32,6 @@ export default class App extends Component {
       this.setState({error: "Could not retrieve spells! The Head Wizard probably found the ale again."})
     }
   }
-
-  // setSpellSlots = () => {
-
-  // }
 
   render() {
     return (
