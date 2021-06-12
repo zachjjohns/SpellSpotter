@@ -1,7 +1,8 @@
 import './App.css';
 import Header from '../Header/Header';
 import SpellSlots from '../SpellSlots/SpellSlots';
-import {getSpells, getSingleSpell} from '../../APIcalls';
+import SpellSelect from '../SpellSelect/SpellSelect';
+import { getSpells } from '../../APIcalls';
 import React, { Component } from 'react';
 
 export default class App extends Component {
@@ -16,7 +17,7 @@ export default class App extends Component {
   componentDidMount = async () => {
     try {
       const fetchedSpells = await getSpells();
-      this.setState({spells: fetchedSpells})
+      this.setState({spells: fetchedSpells.results})
     } catch (error) {
       this.setState({error: "Could not retrieve spells! The Head Wizard probably found the ale again."})
     }
@@ -27,6 +28,7 @@ export default class App extends Component {
       <>
         <Header />
         <SpellSlots />
+        <SpellSelect spells={this.state.spells}/>
       </>
     )
   }
