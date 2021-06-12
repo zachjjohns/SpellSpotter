@@ -18,15 +18,15 @@ export default class SpellSelect extends Component {
 
   addSpell = async (event) => {
     event.preventDefault();
+    this.clearSelect();
     this.checkForValue();
     const grabbedSpell = await getSingleSpell(this.state.currentSpell)
-    for (let i = 0; i < this.state.spellBook.length; i++) {
-      if (this.state.spellBook[i].index === this.state.currentSpell) {
-        this.setState({ error: "You already have this spell!" })
-        return
-      }
-    }
+    this.checkForDuplicate();
     this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
+  }
+
+  clearSelect = () => {
+    this.setState({ error: ""})
   }
 
   checkForValue = () => {
@@ -36,7 +36,12 @@ export default class SpellSelect extends Component {
   }
 
   checkForDuplicate = () => {
-    
+    for (let i = 0; i < this.state.spellBook.length; i++) {
+      if (this.state.spellBook[i].index === this.state.currentSpell) {
+        this.setState({ error: "You already have this spell!" })
+        return
+      }
+    }
   }
 
   render() {
