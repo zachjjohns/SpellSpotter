@@ -12,3 +12,13 @@
   flex-direction: column;
   align-items: center;
 }
+
+.ammo-p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 0;
+  color: #F9D03F;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #7D691F;
+  text-shadow: 0px 0px 10px black;
+}
