@@ -32,6 +32,7 @@ export default class SpellSelect extends Component {
     return (
     <>
       <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
+        <option value="" defaultValue="selected" disabled hidden>Select Your Spells</option>
         {this.props.spells.map((spell) => (
           <option value={spell.index} key={spell.index}>{spell.name}</option>
         ))}
