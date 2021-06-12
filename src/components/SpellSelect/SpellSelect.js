@@ -46,7 +46,7 @@ export default class SpellSelect extends Component {
 
   render() {
     return (
-    <>
+    <div className="select-container">
       <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
         <option value="" defaultValue="selected" disabled hidden>Select Your Spells</option>
         {this.props.spells.map((spell) => (
@@ -58,7 +58,7 @@ export default class SpellSelect extends Component {
         onClick={event => this.addSpell(event)}>Add to Spell Book
       </button>
       <h3>{this.state.error}</h3>
-    </>
+    </div>
     )
   }
 }
