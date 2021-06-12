@@ -29,9 +29,7 @@ export default class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route path="/">
-            <SpellSlots />
-          </Route>
+          <Route exact path="/" component={SpellSlots} />
           <Route path="/spellbook">
             <SpellSelect spells={this.state.spells}/>
           </Route>

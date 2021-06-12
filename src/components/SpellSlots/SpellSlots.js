@@ -1,5 +1,5 @@
 import './SpellSlots.css';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class SpellSlots extends Component {
   constructor() {
@@ -23,6 +23,8 @@ export default class SpellSlots extends Component {
 
   submitSpells = event => {
     event.preventDefault();
+    console.log("I happened")
+    this.props.history.push("/spellbook")
   }
 
   render() {
