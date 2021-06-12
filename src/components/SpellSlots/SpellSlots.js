@@ -23,7 +23,6 @@ export default class SpellSlots extends Component {
 
   submitSpells = event => {
     event.preventDefault();
-    
   }
 
   render() {

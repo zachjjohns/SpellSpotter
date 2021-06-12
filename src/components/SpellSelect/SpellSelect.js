@@ -7,7 +7,8 @@ export default class SpellSelect extends Component {
     super(props);
     this.state = {
       currentSpell: "",
-      spellBook: []
+      spellBook: [],
+      error: ""
     }
   }
 
@@ -18,8 +19,13 @@ export default class SpellSelect extends Component {
   addSpell = async (event) => {
     event.preventDefault();
     const grabbedSpell = await getSingleSpell(this.state.currentSpell)
+    for (let i = 0; i < this.state.spellBook.length; i++) {
+      if (this.state.spellBook[i].index === this.state.currentSpell) {
+        this.setState({ error: "You already have this spell!" })
+        return
+      }
+    }
     this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
-    console.log(this.state.spellBook)
   }
 
   render() {
@@ -32,7 +38,9 @@ export default class SpellSelect extends Component {
       </select>
       <button
         className="add-spell-button"
-        onClick={event => this.addSpell(event)}>Add to Spell Book</button>
+        onClick={event => this.addSpell(event)}>Add to Spell Book
+      </button>
+      <h3>{this.state.error}</h3>
     </>
     )
   }
