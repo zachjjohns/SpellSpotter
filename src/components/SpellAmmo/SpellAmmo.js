@@ -19,6 +19,11 @@ export default class SpellAmmo extends Component {
       error: ""
     }
   }
+
+  useSpell = spellLevel => {
+    console.log(spellLevel)
+    this.setState({ [spellLevel]: this.state[spellLevel]-1})
+  }
   
   render() {
     return (
@@ -28,6 +33,7 @@ export default class SpellAmmo extends Component {
           <div className="level-container">
             <p>1st</p>
             <p className="ammo-p">{this.state.level1}</p>
+            <button onClick={() => this.useSpell("level1")}>Cast Spell</button>
           </div>
           <div className="level-container">
             <p>2nd</p>
