@@ -34,16 +34,20 @@ export default class App extends Component {
     }
   }
 
+  setSpellAmmo = () => {
+
+  }
+
   render() {
     return (
       <div>
         <Header />
         <Switch>
           <Route exact path="/">
-            <SpellSlots data={this.state}/>
+            <SpellSlots ammo={this.state}/>
           </Route>
           <Route path="/spellbook">
-            <SpellAmmo />
+            <SpellAmmo ammo={this.state}/>
             <SpellSelect spells={this.state.spells}/>
           </Route>
         </Switch>
