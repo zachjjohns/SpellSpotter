@@ -1,5 +1,6 @@
 import './SpellSlots.css';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class SpellSlots extends Component {
   constructor() {
@@ -14,15 +15,24 @@ export default class SpellSlots extends Component {
       level7: 0,
       level8: 0,
       level9: 0,
+      error: ""
     }
   }
 
   handleChange = event => {
-    this.setState({ [event.target.name]: parseInt(event.target.value) })
+    this.setState({ [event.target.name]: parseInt(event.target.value, 10) })
   }
 
-  submitSpells = event => {
-    event.preventDefault();
+  submitSpells = data => {
+    this.props.data.level1 = data.level1
+    this.props.data.level2 = data.level2
+    this.props.data.level3 = data.level3
+    this.props.data.level4 = data.level4
+    this.props.data.level5 = data.level5
+    this.props.data.level6 = data.level6
+    this.props.data.level7 = data.level7
+    this.props.data.level8 = data.level8
+    this.props.data.level9 = data.level9
   }
 
   render() {
@@ -113,11 +123,11 @@ export default class SpellSlots extends Component {
           />
         </div>
         <div className="submit-wrapper">
-          <button
+          <Link to="/spellbook"
             className="submit-spells"
-            onClick={event => this.submitSpells(event)}>
+            onClick={() => this.submitSpells(this.state)}>
             Submit Spells!
-          </button>
+          </Link>
         </div>
       </form>
     )
