@@ -1,6 +1,7 @@
 import './App.css';
 import Header from '../Header/Header';
 import SpellSlots from '../SpellSlots/SpellSlots';
+import SpellAmmo from '../SpellAmmo/SpellAmmo';
 import SpellSelect from '../SpellSelect/SpellSelect';
 import { getSpells } from '../../APIcalls';
 import React, { Component } from 'react';
@@ -42,6 +43,7 @@ export default class App extends Component {
             <SpellSlots data={this.state}/>
           </Route>
           <Route path="/spellbook">
+            <SpellAmmo />
             <SpellSelect spells={this.state.spells}/>
           </Route>
         </Switch>
