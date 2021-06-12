@@ -4,6 +4,7 @@ import SpellSlots from '../SpellSlots/SpellSlots';
 import SpellSelect from '../SpellSelect/SpellSelect';
 import { getSpells } from '../../APIcalls';
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 export default class App extends Component {
   constructor(props) {
