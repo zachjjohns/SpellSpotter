@@ -46,19 +46,23 @@ export default class SpellSelect extends Component {
 
   render() {
     return (
-    <div className="select-container">
-      <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
-        <option value="" defaultValue="selected" disabled hidden>Select Your Spells</option>
-        {this.props.spells.map((spell) => (
-          <option value={spell.index} key={spell.index}>{spell.name}</option>
-        ))}
-      </select>
-      <button
-        className="add-spell-button"
-        onClick={event => this.addSpell(event)}>Add to Spell Book
-      </button>
-      <h3>{this.state.error}</h3>
-    </div>
+    <form>
+      <div className="select-container">
+        <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
+          <option value="" defaultValue="selected" disabled hidden>Select Your Spells</option>
+          {this.props.spells.map((spell) => (
+            <option value={spell.index} key={spell.index}>{spell.name}</option>
+          ))}
+        </select>
+        <button
+          className="add-spell-button"
+          onClick={event => this.addSpell(event)}>Add to Spell Book
+        </button>
+      </div>
+      <div className="error-wrapper">
+        <h3>{this.state.error}</h3>
+      </div>
+    </form>
     )
   }
 }
