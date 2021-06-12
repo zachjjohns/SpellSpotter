@@ -18,6 +18,7 @@ export default class SpellSelect extends Component {
 
   addSpell = async (event) => {
     event.preventDefault();
+    this.checkForValue();
     const grabbedSpell = await getSingleSpell(this.state.currentSpell)
     for (let i = 0; i < this.state.spellBook.length; i++) {
       if (this.state.spellBook[i].index === this.state.currentSpell) {
@@ -26,6 +27,16 @@ export default class SpellSelect extends Component {
       }
     }
     this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
+  }
+
+  checkForValue = () => {
+    if (!this.state.currentSpell) {
+      this.setState({ error: "Please select a spell to add."})
+    }
+  }
+
+  checkForDuplicate = () => {
+    
   }
 
   render() {
