@@ -1,3 +1,13 @@
 .slots-intro {
   text-align: center;
 }
+
+.slots-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
