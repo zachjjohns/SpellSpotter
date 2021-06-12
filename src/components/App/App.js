@@ -26,7 +26,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <Header />
         <Switch>
           <Route path="/">
@@ -36,7 +36,7 @@ export default class App extends Component {
             <SpellSelect spells={this.state.spells}/>
           </Route>
         </Switch>
-      </>
+      </div>
     )
   }
 }
