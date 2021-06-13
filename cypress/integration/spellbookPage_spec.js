@@ -86,4 +86,11 @@ describe('SpellSelect', () => {
     cy.get('.spell-desc').should('have.text', 'A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn.')
     cy.get('.remove-spell').should('have.text', 'Remove Spell')
   })
+
+  it('should no longer render a card after clicking its Remove Spell button', () => {
+    cy.get('.spells-dropdown').select('Acid Arrow')
+    cy.get('.add-spell-button').click()
+    cy.get('.remove-spell').click()
+    cy.get('.spell-card').should('not.exist')
+  })
 })
