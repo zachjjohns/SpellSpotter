@@ -1,6 +1,7 @@
 import './SpellSlots.css';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class SpellSlots extends Component {
   constructor() {
@@ -129,7 +130,20 @@ export default class SpellSlots extends Component {
             Submit Spells!
           </Link>
         </div>
+        <p className="stuck-prompt">Not sure? Follow <a className="stuck-link" href="https://www.dndbeyond.com/classes">this link</a>, click on your class, and find your level within the table.</p>
       </form>
     )
   }
+}
+
+SpellSlots.propTypes = {
+  level1: PropTypes.number,
+  level2: PropTypes.number,
+  level3: PropTypes.number,
+  level4: PropTypes.number,
+  level5: PropTypes.number,
+  level6: PropTypes.number,
+  level7: PropTypes.number,
+  level8: PropTypes.number,
+  level9: PropTypes.number,
 }

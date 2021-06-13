@@ -1,0 +1,48 @@
+.spell-card {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 20rem;
+  border: 4px solid white;;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px #F9D03F;
+}
+
+.spell-name {
+  font-size: 2rem;
+  margin: .5rem;
+  color: #F9D03F;
+  text-shadow: 0px 0px 5px white;
+}
+
+.spell-level, .spell-range, .spell-castime {
+  font-weight: bold;
+}
+
+.spell-desc {
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: .5rem;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.remove-spell {
+  border: 2px solid white;
+  border-radius: .4rem;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  padding: .5rem;
+  margin-bottom: 0rem;
+  width: 30%;
+  align-self: center;
+  cursor: pointer;
+}
+
+.remove-spell:hover {
+  background-color: #A37B18;
+}

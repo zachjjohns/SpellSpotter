@@ -1,5 +1,30 @@
-.todays-ammo {
+.redo {
+  border: 2px solid white;
+  border-radius: .4rem;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5rem;
+  margin: 1.5rem;
+  text-decoration: none;
+  box-shadow: 5px 5px 10px black;
+}
+
+.redo:hover {
+  background-color: #A37B18;
+}
+
+.todays-ammo, .cantrips {
   text-align: center;
+}
+
+.cantrips {
+  margin: 0;
+  margin-top: -1rem;
+  font-size: .9rem;
 }
 
 .ammo-wrapper {

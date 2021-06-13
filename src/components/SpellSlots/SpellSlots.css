@@ -11,3 +11,28 @@
   display: flex;
   justify-content: center;
 }
+
+.submit-spells {
+  border: 2px solid white;
+  border-radius: .4rem;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  padding: .5rem;
+  margin: 1.5rem;
+  text-decoration: none;
+  box-shadow: 5px 5px 10px black;
+}
+
+.submit-spells:hover {
+  background-color: #A37B18;
+}
+
+.stuck-prompt {
+  text-align: center;
+}
+
+.stuck-link:visited,
+.stuck-link:link {
+  color: goldenrod;
+}
