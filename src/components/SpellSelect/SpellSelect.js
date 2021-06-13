@@ -10,7 +10,7 @@ export default class SpellSelect extends Component {
     this.state = {
       currentSpell: "",
       spellBook: [],
-      error: ""
+      addError: ""
     }
   }
 
@@ -20,14 +20,14 @@ export default class SpellSelect extends Component {
 
   addSpell = async (event) => {
     event.preventDefault();
-    this.setState({ error: ""})
+    this.setState({ addError: ""})
     if (!this.state.currentSpell) {
-      this.setState({ error: "Please select a spell to add."})
+      this.setState({ addError: "Please select a spell to add."})
       return
     }
     for (let i = 0; i < this.state.spellBook.length; i++) {
       if (this.state.spellBook[i].index === this.state.currentSpell) {
-        this.setState({ error: "You already have this spell!" })
+        this.setState({ addError: "You already have this spell!" })
         return
       }
     }
@@ -59,7 +59,7 @@ export default class SpellSelect extends Component {
       </div>
       <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
       <div className="error-wrapper">
-        <h3>{this.state.error}</h3>
+        <h3>{this.state.addError}</h3>
       </div>
       <div className="spellbook-wrapper">
         <CardContainer spellBook={this.state.spellBook} removeSpell={this.removeSpell}/>
