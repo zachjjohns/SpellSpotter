@@ -1,5 +1,6 @@
 import './SpellAmmo.css';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class SpellAmmo extends Component {
   constructor(props) {
@@ -79,4 +80,16 @@ export default class SpellAmmo extends Component {
       </section>
     )
   }
+}
+
+SpellAmmo.propTypes = {
+  level1: PropTypes.number,
+  level2: PropTypes.number,
+  level3: PropTypes.number,
+  level4: PropTypes.number,
+  level5: PropTypes.number,
+  level6: PropTypes.number,
+  level7: PropTypes.number,
+  level8: PropTypes.number,
+  level9: PropTypes.number,
 }
