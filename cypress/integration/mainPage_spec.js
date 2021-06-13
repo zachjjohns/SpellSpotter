@@ -31,6 +31,9 @@ describe('SpellSlots', () => {
   ]})
       .visit('http://localhost:3000')
   })
+  it('Should display the website header/title', () => {
+    cy.get('header').get('h1').should('have.text', 'Spell Spotter')
+  })
 
   it('Should display an intro message', () => {
     cy.get('.slots-intro').should('have.text', 'First, please enter your maximum Spell Slots per Spell Level')
