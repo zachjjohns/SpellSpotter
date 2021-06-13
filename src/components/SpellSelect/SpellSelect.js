@@ -2,6 +2,7 @@ import './SpellSelect.css';
 import { getSingleSpell } from '../../APIcalls';
 import React, { Component } from 'react'
 import CardContainer from '../CardContainer/CardContainer';
+import Proptypes from 'prop-types';
 
 export default class SpellSelect extends Component {
   constructor(props) {
@@ -60,6 +61,11 @@ export default class SpellSelect extends Component {
     </form>
     )
   }
+}
+
+SpellSelect.propTypes = {
+  spells: PropTypes.array,
+  
 }
 
 
