@@ -2,7 +2,7 @@ import './CardContainer.css';
 import Card from '../Card/Card';
 import React from 'react'
 
-export default function CardContainer({ spellBook }) {
+export default function CardContainer({ spellBook, removeSpell }) {
   const spellCards = spellBook.map(spell => {
     return (
       <Card
@@ -13,6 +13,7 @@ export default function CardContainer({ spellBook }) {
         desc={spell.desc}
         range={spell.range}
         casting_time={spell.casting_time}
+        removeSpell={removeSpell}
       />
     )
   })

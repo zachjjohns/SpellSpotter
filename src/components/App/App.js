@@ -34,10 +34,6 @@ export default class App extends Component {
     }
   }
 
-  setSpellAmmo = () => {
-
-  }
-
   render() {
     return (
       <div>

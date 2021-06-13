@@ -35,6 +35,13 @@ export default class SpellSelect extends Component {
     this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
   }
 
+  removeSpell = (event, id) => {
+    console.log("wuddup")
+    event.preventDefault()
+    const filteredSpells = this.state.spellBook.filter(spell => spell.index !== id);
+    this.setState({ spellBook: filteredSpells });
+  }
+
   render() {
     return (
       <form>
@@ -56,7 +63,7 @@ export default class SpellSelect extends Component {
         <h3>{this.state.error}</h3>
       </div>
       <div className="spellbook-wrapper">
-        <CardContainer spellBook={this.state.spellBook} />
+        <CardContainer spellBook={this.state.spellBook} removeSpell={this.removeSpell}/>
       </div>
     </form>
     )
