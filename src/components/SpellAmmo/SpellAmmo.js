@@ -32,6 +32,7 @@ export default class SpellAmmo extends Component {
       <section className="ammo-section">
         <Link to='/' className="redo">Redo Spell Slots</Link>
         <h2 className="todays-ammo">Today's Spell Ammo by Level</h2>
+        <p className="cantrips">Remember: Cantrips (level 0 spells) are unlimited</p>
         <div className="ammo-wrapper">
           <div className="level-container">
             <p>1st</p>

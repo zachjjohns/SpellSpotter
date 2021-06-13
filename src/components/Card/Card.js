@@ -14,7 +14,11 @@ export default function Card({ id, name, level, desc, range, casting_time, remov
         <p className="spell-castime">Cast Time: {casting_time}</p>
       </div>
       <p className="spell-desc">{desc}</p>
-      <button onClick={(event) => removeSpell(event, id)}>Remove Spell</button>
+      <button
+        className="remove-spell" 
+        onClick={(event) => removeSpell(event, id)}>
+        Remove Spell
+      </button>
     </div>
   )
 }

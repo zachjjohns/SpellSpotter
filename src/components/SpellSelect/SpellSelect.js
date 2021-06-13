@@ -36,7 +36,6 @@ export default class SpellSelect extends Component {
   }
 
   removeSpell = (event, id) => {
-    console.log("wuddup")
     event.preventDefault()
     const filteredSpells = this.state.spellBook.filter(spell => spell.index !== id);
     this.setState({ spellBook: filteredSpells });
