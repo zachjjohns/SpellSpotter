@@ -12,7 +12,7 @@ export default function CardContainer({ spellBook }) {
         level={spell.level}
         desc={spell.desc}
         range={spell.range}
-        attack_type={spell.attack_type}
+        casting_time={spell.casting_time}
       />
     )
   })
