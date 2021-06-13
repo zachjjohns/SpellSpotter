@@ -27,3 +27,12 @@
 .submit-spells:hover {
   background-color: #A37B18;
 }
+
+.stuck-prompt {
+  text-align: center;
+}
+
+.stuck-link:visited,
+.stuck-link:link {
+  color: goldenrod;
+}

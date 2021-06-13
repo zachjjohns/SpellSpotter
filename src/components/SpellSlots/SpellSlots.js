@@ -130,6 +130,7 @@ export default class SpellSlots extends Component {
             Submit Spells!
           </Link>
         </div>
+        <p className="stuck-prompt">Not sure? Follow <a className="stuck-link" href="https://www.dndbeyond.com/classes">this link</a>, click on your class, and find your level within the table.</p>
       </form>
     )
   }
