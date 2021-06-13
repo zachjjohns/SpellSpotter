@@ -12,7 +12,7 @@ export const getSingleSpell = async (spellName) => {
 
 export const errorHandler = (response) => {
   if (!response.ok) {
-    throw new Error(response.message)
+    this.setState({ error: response.message })
   } else {
     return response.json()
   }
