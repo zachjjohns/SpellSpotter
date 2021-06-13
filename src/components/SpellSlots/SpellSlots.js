@@ -24,15 +24,15 @@ export default class SpellSlots extends Component {
   }
 
   submitSpells = data => {
-    this.props.data.level1 = data.level1
-    this.props.data.level2 = data.level2
-    this.props.data.level3 = data.level3
-    this.props.data.level4 = data.level4
-    this.props.data.level5 = data.level5
-    this.props.data.level6 = data.level6
-    this.props.data.level7 = data.level7
-    this.props.data.level8 = data.level8
-    this.props.data.level9 = data.level9
+    this.props.ammo.level1 = data.level1
+    this.props.ammo.level2 = data.level2
+    this.props.ammo.level3 = data.level3
+    this.props.ammo.level4 = data.level4
+    this.props.ammo.level5 = data.level5
+    this.props.ammo.level6 = data.level6
+    this.props.ammo.level7 = data.level7
+    this.props.ammo.level8 = data.level8
+    this.props.ammo.level9 = data.level9
   }
 
   render() {
