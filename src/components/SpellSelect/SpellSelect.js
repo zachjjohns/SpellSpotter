@@ -1,6 +1,7 @@
 import './SpellSelect.css';
 import { getSingleSpell } from '../../APIcalls';
 import React, { Component } from 'react'
+import CardContainer from '../CardContainer/CardContainer';
 
 export default class SpellSelect extends Component {
   constructor(props) {
@@ -62,6 +63,7 @@ export default class SpellSelect extends Component {
       <div className="error-wrapper">
         <h3>{this.state.error}</h3>
       </div>
+      <CardContainer spellBook={this.state.spellBook} />
     </form>
     )
   }
