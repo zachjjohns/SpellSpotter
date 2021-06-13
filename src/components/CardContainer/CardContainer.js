@@ -18,7 +18,7 @@ export default function CardContainer({ spellBook }) {
   })
 
   return (
-    <section>
+    <section className="spellbook-container">
       {spellCards}
     </section>
   )

@@ -1,8 +1,8 @@
 .spell-card {
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  height: 15rem;
+  width: 25rem;
+  height: 20rem;
   border: 2px solid black;
   border-radius: 1rem;
 }

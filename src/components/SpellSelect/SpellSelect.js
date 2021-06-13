@@ -63,7 +63,9 @@ export default class SpellSelect extends Component {
       <div className="error-wrapper">
         <h3>{this.state.error}</h3>
       </div>
-      <CardContainer spellBook={this.state.spellBook} />
+      <div className="spellbook-wrapper">
+        <CardContainer spellBook={this.state.spellBook} />
+      </div>
     </form>
     )
   }
