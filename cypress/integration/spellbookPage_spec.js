@@ -93,4 +93,9 @@ describe('SpellSelect', () => {
     cy.get('.remove-spell').click()
     cy.get('.spell-card').should('not.exist')
   })
+
+  it('should have a Redo Spell Slots link/button that returns to main page', () => {
+    cy.get('.redo').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
 })
