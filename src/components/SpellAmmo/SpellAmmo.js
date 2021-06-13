@@ -1,5 +1,6 @@
 import './SpellAmmo.css';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export default class SpellAmmo extends Component {
@@ -29,6 +30,7 @@ export default class SpellAmmo extends Component {
   render() {
     return (
       <section className="ammo-section">
+        <Link to='/' className="redo">Redo Spell Slots</Link>
         <h2 className="todays-ammo">Today's Spell Ammo by Level</h2>
         <div className="ammo-wrapper">
           <div className="level-container">
