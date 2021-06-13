@@ -35,7 +35,7 @@ describe('SpellSlots', () => {
   it('Should display an intro message', () => {
     cy.get('.slots-intro').should('have.text', 'First, please enter your maximum Spell Slots per Spell Level')
   })
-  
+
   it('Should display labels + inputs for each spell level', () => {
     cy.get('label').should('have.text', '1st2nd3rd4th5th6th7th8th9th')
     cy.get('form input[name="level1"]')
@@ -47,5 +47,15 @@ describe('SpellSlots', () => {
     cy.get('form input[name="level7"]')
     cy.get('form input[name="level8"]')
     cy.get('form input[name="level9"]')
+  })
+
+  it('Should display a prompt with a link for how to determine spell slots', () => {
+    cy.get('.stuck-prompt').should('have.text', 'Not sure? Follow this link, click on your class, and find your level within the table.')
+    cy.get('.stuck-link').should('have.text', 'this link')
+  })
+
+  it('Should have a Link for submitting spells which takes user to new page', () => {
+    cy.get('.submit-spells').click()
+    cy.url().should('include', '/spellbook')
   })
 })
