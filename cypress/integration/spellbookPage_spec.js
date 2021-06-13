@@ -40,5 +40,15 @@ describe('SpellSelect', () => {
     cy.get('.cantrips').should('have.text', 'Remember: Cantrips (level 0 spells) are unlimited')
   })
 
-  
+  it('should display levels for each spell slot', () => {
+    cy.get('.ammo-label').should('have.text', '1st2nd3rd4th5th6th7th8th9th')
+  })
+
+  it('should display numbers representing spell slot state', () => {
+    cy.get('.ammo-p').should('have.text', '000000000')
+  })
+
+  it('should have Cast Spell buttons that reduce current spells by 1 when clicked', () => {
+    cy.get('')
+  })
 })

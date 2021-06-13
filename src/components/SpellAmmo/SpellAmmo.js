@@ -35,49 +35,49 @@ export default class SpellAmmo extends Component {
         <p className="cantrips">Remember: Cantrips (level 0 spells) are unlimited</p>
         <div className="ammo-wrapper">
           <div className="level-container">
-            <p>1st</p>
+            <p className="ammo-label">1st</p>
             <p className="ammo-p">{this.state.level1}</p>
-            <button onClick={() => this.useSpell("level1")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level1")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>2nd</p>
+            <p className="ammo-label">2nd</p>
             <p className="ammo-p">{this.state.level2}</p>
-            <button onClick={() => this.useSpell("level2")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level2")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>3rd</p>
+            <p className="ammo-label">3rd</p>
             <p className="ammo-p">{this.state.level3}</p>
-            <button onClick={() => this.useSpell("level3")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level3")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>4th</p>
+            <p className="ammo-label">4th</p>
             <p className="ammo-p">{this.state.level4}</p>
-            <button onClick={() => this.useSpell("level4")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level4")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>5th</p>
+            <p className="ammo-label">5th</p>
             <p className="ammo-p">{this.state.level5}</p>
-            <button onClick={() => this.useSpell("level5")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level5")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>6th</p>
+            <p className="ammo-label">6th</p>
             <p className="ammo-p">{this.state.level6}</p>
-            <button onClick={() => this.useSpell("level6")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level6")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>7th</p>
+            <p className="ammo-label">7th</p>
             <p className="ammo-p">{this.state.level7}</p>
-            <button onClick={() => this.useSpell("level7")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level7")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>8th</p>
+            <p className="ammo-label">8th</p>
             <p className="ammo-p">{this.state.level8}</p>
-            <button onClick={() => this.useSpell("level8")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level8")} className="cast-spell">Cast Spell</button>
           </div>
           <div className="level-container">
-            <p>9th</p>
+            <p className="ammo-label">9th</p>
             <p className="ammo-p">{this.state.level9}</p>
-            <button onClick={() => this.useSpell("level9")}>Cast Spell</button>
+            <button onClick={() => this.useSpell("level9")} className="cast-spell">Cast Spell</button>
           </div>
         </div>
       </section>
