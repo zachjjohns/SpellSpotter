@@ -1,6 +1,6 @@
 import './Card.css';
-
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export default function Card({ id, name, level, desc, range, casting_time, removeSpell }) {
   
@@ -22,3 +22,14 @@ export default function Card({ id, name, level, desc, range, casting_time, remov
     </div>
   )
 }
+
+Card.propTypes = {
+  id: PropTypes.string, 
+  name: PropTypes.string, 
+  level: PropTypes.number, 
+  desc: PropTypes.array, 
+  range: PropTypes.string, 
+  casting_time: PropTypes.string, 
+  removeSpell: PropTypes.func
+}
+

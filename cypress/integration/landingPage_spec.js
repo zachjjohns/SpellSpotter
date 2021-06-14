@@ -62,3 +62,21 @@ describe('SpellSlots', () => {
     cy.url().should('include', '/spellbook')
   })
 })
+
+describe('Loading Spells', () => {
+  it('Should render a loading message while waiting for fetched data for spells', () => {
+    cy.intercept('https://www.dnd5eapi.co/api/spells/', [])
+      .visit('http://localhost:3000')
+      .get('.loading')
+      .should('have.text', "Loading...")
+  })
+})
+
+describe('Spells Error Handling', () => {
+  it('Should render an error message when there is an error with fetching data for trees', () => {
+    cy.intercept('https://www.dnd5eapi.co/api/spells', {statusCode: 404})
+      .visit('http://localhost:3000/')
+      .get('.error-message')
+      .should('have.text', 'Could not retrieve spells! The Head Wizard probably found the ale again.')
+  })
+})

@@ -35,6 +35,14 @@ export default class App extends Component {
   }
 
   render() {
+    if (this.state.error) {
+      return <h1 className="error-message">{this.state.error}</h1>
+    }
+
+    if (!this.state.error && !this.state.spells.length) {
+      return <h1 className="loading">Loading...</h1>
+    }
+
     return (
       <div>
         <Header />

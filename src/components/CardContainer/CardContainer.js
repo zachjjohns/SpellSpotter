@@ -1,6 +1,7 @@
 import './CardContainer.css';
 import Card from '../Card/Card';
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function CardContainer({ spellBook, removeSpell }) {
   const spellCards = spellBook.map(spell => {
@@ -23,4 +24,9 @@ export default function CardContainer({ spellBook, removeSpell }) {
       {spellCards}
     </section>
   )
+}
+
+CardContainer.propTypes = {
+  spellBook: PropTypes.array,
+  removeSpell: PropTypes.func
 }
