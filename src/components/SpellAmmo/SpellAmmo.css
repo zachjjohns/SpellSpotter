@@ -51,13 +51,15 @@
 }
 
 .ammo-p {
-  font-size: 3rem;
+  font-family: 'Bungee', cursive;
+  font-size: 4rem;
   font-weight: bold;
   margin: .5rem;
   color: #F9D03F;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #7D691F;
-  text-shadow: 0px 0px 10px black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #7C1F33;
+  text-shadow: 0px 5px 3px black;
+
 }
 
 .cast-spell {
