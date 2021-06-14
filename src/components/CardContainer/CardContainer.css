@@ -4,3 +4,16 @@
   text-align: center;
   gap: 3rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .spellbook-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .spellbook-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

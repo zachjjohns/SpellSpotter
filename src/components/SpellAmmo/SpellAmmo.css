@@ -86,6 +86,12 @@
 }
 
 @media screen and (max-width: 480px) {
+  .redo {
+    margin: 1rem;
+    padding: .3rem;
+    box-shadow: none;
+  }
+  
   .ammo-label {
     font-size: 1rem;
   }
