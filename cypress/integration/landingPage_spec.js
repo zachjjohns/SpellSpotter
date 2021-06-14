@@ -36,7 +36,7 @@ describe('SpellSlots', () => {
   })
 
   it('Should display an intro message', () => {
-    cy.get('.slots-intro').should('have.text', 'First, please enter your maximum Spell Slots per Spell Level')
+    cy.get('.slots-intro').should('have.text', 'Enter your maximum Spell Slots per Spell Level')
   })
 
   it('Should display labels + inputs for each spell level', () => {
@@ -78,5 +78,18 @@ describe('Spells Error Handling', () => {
       .visit('http://localhost:3000/')
       .get('.error-message')
       .should('have.text', 'Could not retrieve spells! The Head Wizard probably found the ale again.')
+  })
+})
+
+describe('Bad URL Handling', () => {
+  it('Should display an error message upon a bad URL', () => {
+    cy.visit('http://localhost:3000/badurl')
+      .get('.not-found').should('have.text', 'URL Not Found - Click button to return')
+  })
+
+  it('Should have a button that returns to main page when clicked', () => {
+    cy.visit('http://localhost:3000/badurl')
+      .get('.return-home').should('have.text', 'Return Home').click()
+      .url().should('eq', 'http://localhost:3000/')
   })
 })

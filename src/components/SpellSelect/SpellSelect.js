@@ -65,8 +65,7 @@ export default class SpellSelect extends Component {
             <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
           </div>
           <div className="error-wrapper">
-            {this.state.error && <h3>{this.state.error}</h3>}
-            <h3>{this.state.addError}</h3>
+            <h3 className="add-error">{this.state.addError}</h3>
           </div>
         </form>
         <div className="spellbook-wrapper">

@@ -94,6 +94,17 @@ describe('SpellSelect', () => {
     cy.get('.spell-card').should('not.exist')
   })
 
+  it('should display an error message when attempting to add the same spell twice', () => {
+    cy.get('.spells-dropdown').select('Acid Arrow')
+    cy.get('.add-spell-button').click().click()
+    cy.get('.add-error').should('have.text', 'You already have this spell!')
+  })
+
+  it('should display an error message when clicking the add spell button with no selection', () => {
+    cy.get('.add-spell-button').click()
+    cy.get('.add-error').should('have.text', 'Please select a spell to add.')
+  })
+
   it('should have a Redo Spell Slots link/button that returns to main page', () => {
     cy.get('.redo').click()
     cy.url().should('eq', 'http://localhost:3000/')

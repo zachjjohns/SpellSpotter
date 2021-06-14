@@ -1,3 +1,37 @@
-.loading, .error-message {
+body {
+  margin: 0;
+  background-color: #79142D;
+  color: white;
+}
+
+* {
+  font-family: 'Titillium Web', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.loading, .error-message, .not-found {
   text-align: center;
+}
+
+.return-home {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  width: 10rem;
+  border: 2px solid white;
+  border-radius: .2rem;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  padding: .3rem;
+  margin: auto;
+  cursor: pointer;
+  text-shadow: 0px 0px 3px black;
+  transition-duration: .3s;
+}
+
+.return-home:hover {
+  background-color: #A37B18;
 }
