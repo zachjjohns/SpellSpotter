@@ -69,7 +69,7 @@ describe('SpellSelect', () => {
   })
 
   it('should display a dropdown containing a list of spell names to add', () => {
-    cy.get('.spells-dropdown').should('have.text', 'Select Your Spells')
+    cy.get('.spells-dropdown').find(':selected').should('have.text', 'Select Your Spells')
   })
 
   it('should display a note about containing only spells from original game', () => {
