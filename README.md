@@ -40,6 +40,11 @@ Click on the "cast spell" button to use it, and click the top-right "Redo Spells
     * Ability to store/manipulate data displayed in the app
     * Using React Router to handle mutliple views
 
+## Reflections / Lessons Learned
+* Spending time on wireframing + planning how components interact goes a long way
+* When on a time crunch: focus on an MVP and build out additional features if time allows
+* Learned a lot about empathizing with the user through personas & user stories
+
 ## Possible Future Extensions
 * Class + level selection to filter appropriate spells
 * Better reset/recharge spell functionality
