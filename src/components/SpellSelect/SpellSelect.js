@@ -10,7 +10,8 @@ export default class SpellSelect extends Component {
     this.state = {
       currentSpell: "",
       spellBook: [],
-      addError: ""
+      addError: "",
+      error: "",
     }
   }
 
@@ -31,8 +32,12 @@ export default class SpellSelect extends Component {
         return
       }
     }
-    const grabbedSpell = await getSingleSpell(this.state.currentSpell)
-    this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
+    try {
+      const grabbedSpell = await getSingleSpell(this.state.currentSpell)
+      this.setState({ spellBook: [...this.state.spellBook, grabbedSpell]})
+    } catch (error) {
+      this.setState({ error: "Could not retrieve your spell!" })
+    }
   }
 
   removeSpell = (event, id) => {
@@ -59,6 +64,7 @@ export default class SpellSelect extends Component {
       </div>
       <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
       <div className="error-wrapper">
+        {this.state.error && <h3>{this.state.error}</h3>}
         <h3>{this.state.addError}</h3>
       </div>
       <div className="spellbook-wrapper">
