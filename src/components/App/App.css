@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+  background-color: #79142D;
+  color: white;
+}
+
+* {
+  font-family: 'Titillium Web', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .loading, .error-message {
   text-align: center;
 }

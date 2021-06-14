@@ -36,7 +36,7 @@ describe('SpellSlots', () => {
   })
 
   it('Should display an intro message', () => {
-    cy.get('.slots-intro').should('have.text', 'First, please enter your maximum Spell Slots per Spell Level')
+    cy.get('.slots-intro').should('have.text', 'Enter your maximum Spell Slots per Spell Level')
   })
 
   it('Should display labels + inputs for each spell level', () => {
