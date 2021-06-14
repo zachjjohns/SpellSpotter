@@ -8,8 +8,8 @@ export default function Card({ id, name, level, desc, range, casting_time, remov
   return (
     <div className="spell-card" id={id}>
       <p className="spell-name">{name}</p>
+      <p className="spell-level">Level {level}</p>
       <div className="details-row">
-        <p className="spell-level">Level {level}</p>
         <p className="spell-range">Range: {range}</p>
         <p className="spell-castime">Cast Time: {casting_time}</p>
       </div>

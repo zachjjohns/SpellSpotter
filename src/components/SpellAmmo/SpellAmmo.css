@@ -11,6 +11,8 @@
   margin: 1.5rem;
   text-decoration: none;
   box-shadow: 5px 5px 10px black;
+  text-shadow: 0px 0px 5px black;
+  transition-duration: .3s;
 }
 
 .redo:hover {
@@ -19,6 +21,7 @@
 
 .todays-ammo, .cantrips {
   text-align: center;
+  text-shadow: 0px 0px 5px black;
 }
 
 .cantrips {
@@ -30,6 +33,8 @@
 .ammo-wrapper {
   display: flex;
   justify-content: space-around;
+  width: 65%;
+  margin: auto;
 }
 
 .level-container {
@@ -38,12 +43,38 @@
   align-items: center;
 }
 
-.ammo-p {
-  font-size: 3rem;
+.ammo-label {
   font-weight: bold;
-  margin-top: 0;
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 5px black;
+  margin-bottom: 0;
+}
+
+.ammo-p {
+  font-family: 'Bungee', cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: .5rem;
   color: #F9D03F;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #7D691F;
-  text-shadow: 0px 0px 10px black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #7C1F33;
+  text-shadow: 0px 5px 3px black;
+}
+
+.cast-spell {
+  border: 2px solid white;
+  border-radius: .2rem;
+  background-color: goldenrod;
+  color: white;
+  font-weight: bold;
+  padding: .3rem;
+  align-self: center;
+  cursor: pointer;
+  text-shadow: 0px 0px 3px black;
+  box-shadow: 3px 3px 3px black;
+  transition-duration: .3s;
+}
+
+.cast-spell:hover {
+  background-color: #A37B18;
 }

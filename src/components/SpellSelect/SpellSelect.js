@@ -48,29 +48,31 @@ export default class SpellSelect extends Component {
 
   render() {
     return (
-      <form>
-      <h3 className="your-spellbook">Add Your Spells Here!</h3>
-      <div className="select-container">
-        <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
-          <option value="" defaultValue="selected" disabled hidden>Select Your Spells</option>
-          {this.props.spells.map((spell) => (
-            <option value={spell.index} key={spell.index}>{spell.name}</option>
-            ))}
-        </select>
-        <button
-          className="add-spell-button"
-          onClick={event => this.addSpell(event)}>Add to Spell Book
-        </button>
-      </div>
-      <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
-      <div className="error-wrapper">
-        {this.state.error && <h3>{this.state.error}</h3>}
-        <h3>{this.state.addError}</h3>
-      </div>
-      <div className="spellbook-wrapper">
-        <CardContainer spellBook={this.state.spellBook} removeSpell={this.removeSpell}/>
-      </div>
-    </form>
+      <section>
+        <form className="select-form">
+          <h3 className="your-spellbook">Add Your Spells Here!</h3>
+          <div className="select-container">
+            <select className="spells-dropdown" value={this.state.currentSpell} onChange={event => this.handleChange(event)}>
+              <option value="" defaultValue="selected" disabled hidden>Select Your Spells</option>
+              {this.props.spells.map((spell) => (
+                <option value={spell.index} key={spell.index}>{spell.name}</option>
+                ))}
+            </select>
+            <button
+              className="add-spell-button"
+              onClick={event => this.addSpell(event)}>Add to Spell Book
+            </button>
+            <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
+          </div>
+          <div className="error-wrapper">
+            {this.state.error && <h3>{this.state.error}</h3>}
+            <h3>{this.state.addError}</h3>
+          </div>
+        </form>
+        <div className="spellbook-wrapper">
+          <CardContainer spellBook={this.state.spellBook} removeSpell={this.removeSpell}/>
+        </div>
+      </section>
     )
   }
 }
