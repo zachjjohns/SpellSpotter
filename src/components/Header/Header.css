@@ -4,7 +4,20 @@
   font-size: 4em;
   color: white;
   text-shadow: 5px 5px 0 black;
+  margin: 0;
+  margin-top: .5rem;
+}
+
+header {
   border-bottom: 4px solid #F9D03F;
   box-shadow: 0px 10px 10px black;
-  margin-top: 1rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .app-name {
+    font-size: 3rem;
+    text-align: start;
+    margin-left: 1rem;
+  }
 }
