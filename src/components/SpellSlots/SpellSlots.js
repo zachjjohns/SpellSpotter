@@ -39,7 +39,7 @@ export default class SpellSlots extends Component {
   render() {
     return (
       <form className="spell-slots-form">
-        <h2 className="slots-intro">First, please enter your maximum Spell Slots per Spell Level</h2>
+        <h2 className="slots-intro">Enter your maximum Spell Slots per Spell Level</h2>
         <div className="slots-container">
           <div className="level-container">
             <label htmlFor="level1">1st</label>
