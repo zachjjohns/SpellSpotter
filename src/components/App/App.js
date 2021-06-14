@@ -5,7 +5,7 @@ import SpellAmmo from '../SpellAmmo/SpellAmmo';
 import SpellSelect from '../SpellSelect/SpellSelect';
 import { getSpells } from '../../APIcalls';
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
 export default class App extends Component {
   constructor(props) {
@@ -53,6 +53,10 @@ export default class App extends Component {
           <Route path="/spellbook">
             <SpellAmmo ammo={this.state}/>
             <SpellSelect spells={this.state.spells}/>
+          </Route>
+          <Route>
+            <h2 className="not-found">URL Not Found - Click button to return</h2>
+            <Link to ="/" className="return-home">Return Home</Link>
           </Route>
         </Switch>
       </div>
