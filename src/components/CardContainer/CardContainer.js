@@ -26,7 +26,7 @@ export default function CardContainer({ spellBook, removeSpell }) {
   )
 }
 
-CardContainer.PropTypes = {
+CardContainer.propTypes = {
   spellBook: PropTypes.array,
-  removeSpell: PropTypes.function
+  removeSpell: PropTypes.func
 }
