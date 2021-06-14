@@ -62,8 +62,8 @@ export default class SpellSelect extends Component {
               className="add-spell-button"
               onClick={event => this.addSpell(event)}>Add to Spell Book
             </button>
+            <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
           </div>
-          <p className="spell-note">Note: Only contains spells from original game (no expansions)</p>
           <div className="error-wrapper">
             {this.state.error && <h3>{this.state.error}</h3>}
             <h3>{this.state.addError}</h3>
