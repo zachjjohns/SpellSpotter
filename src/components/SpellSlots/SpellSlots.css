@@ -53,3 +53,14 @@
 .stuck-link:link {
   color: goldenrod;
 }
+
+
+@media screen and (max-width: 480px) {
+  .slots-container {
+    width: 95%;
+  }
+
+  .level-container>label {
+    font-size: 1.2rem;
+  }
+}
