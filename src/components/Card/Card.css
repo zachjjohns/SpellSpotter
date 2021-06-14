@@ -10,20 +10,32 @@
 }
 
 .spell-name {
+  font-family: 'Bungee', cursive;
   font-size: 2rem;
+  font-weight: bold;
   margin: .5rem;
   color: #F9D03F;
-  text-shadow: 0px 0px 5px white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #7C1F33;
+  text-shadow: 0px 5px 3px black;
 }
 
 .spell-level, .spell-range, .spell-castime {
   font-weight: bold;
+  text-shadow: 0 0 5px black;
+}
+
+.spell-level {
+  margin: -.8rem;
+  font-size: 1.2rem;
 }
 
 .spell-desc {
   overflow: scroll;
   overflow-x: hidden;
-  padding: .5rem;
+  margin-top: -1rem;
+  margin-bottom: .2rem;
+  padding: .2rem;
 }
 
 .details-row {
