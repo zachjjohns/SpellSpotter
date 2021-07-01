@@ -24,3 +24,4 @@ script:
   - npm run start:ci &
   - npm run cy:run -- --record
   - kill $(jobs -p) || true
+  - cypress run --record --key c19ddfb4-7c7e-46bd-b124-68c394d8f1af
