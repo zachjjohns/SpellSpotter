@@ -11,7 +11,7 @@
 * CSS
 
 ## Deploy Link
-* [Click Here to view the deployed project](http://spellspotter.surge.sh/)
+* [Click Here to view the deployed project](https://spellspotter.surge.sh/)
 
 ## Visual Demo:
 
