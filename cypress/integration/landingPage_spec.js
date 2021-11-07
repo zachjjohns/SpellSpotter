@@ -73,7 +73,7 @@ describe('Loading Spells', () => {
 })
 
 describe('Spells Error Handling', () => {
-  it('Should render an error message when there is an error with fetching data for trees', () => {
+  it('Should render an error message when there is an error with fetching data for spells', () => {
     cy.intercept('https://www.dnd5eapi.co/api/spells', {statusCode: 404})
       .visit('http://localhost:3000/')
       .get('.error-message')
