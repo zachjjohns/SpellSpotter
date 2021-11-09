@@ -1,4 +1,4 @@
-# Spell Spotter (Mod 3 Final Solo Project)
+# Spell Spotter
 
 ## Contributor
 * [Zach Johnson](https://github.com/zachjjohns)
